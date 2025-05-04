@@ -32,6 +32,22 @@
       font-weight: 500;
     }
 
+    .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: #4C837A;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
     main {
       padding: 30px 20px;
       max-width: 1000px;
@@ -69,22 +85,6 @@
       text-align: center;
       color: #333;
     }
-
-    .links {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .links a {
-      color: #4C837A;
-      font-weight: 500;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -92,6 +92,11 @@
   <header>
     <h1>Umer K. Khan</h1>
     <p>Business Intelligence & Analytics Professional | 500+ Dashboards Built | Top 500 Kaggle Contributor</p>
+    <!-- Links Section -->
+    <div class="links">
+      <a href="https://umer960.github.io/Umer_K.Khan_Resume.pdf" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/umer-k-khan-aa403a143/" target="_blank">LinkedIn</a>
+    </div>
   </header>
 
   <main>
@@ -180,12 +185,6 @@
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
-
-    <h2>📄 Links</h2>
-    <div class="links">
-      <a href="https://umer960.github.io/Umer_K.Khan_Resume.pdf" target="_blank">Resume</a>
-      <a href="https://www.linkedin.com/in/umer-k-khan-aa403a143/" target="_blank">LinkedIn</a>
-    </div>
   </main>
 
   <footer>
@@ -194,5 +193,3 @@
 
 </body>
 </html>
-
-
