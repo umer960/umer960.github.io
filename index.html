@@ -3,59 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umer K. Khan Portfolio</title>
+<title>Umer K. Khan | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:#f4f7fe;color:#1e293b}
-.container{max-width:1200px;margin:auto;padding:0 24px}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,sans-serif;background:#f4f7fe;color:#1e293b}
+.container{max-width:1300px;margin:auto;padding:0 20px}
 header{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:80px 0}
-.hero{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
-.hero-left{flex:2}
-.hero-right{flex:1;display:grid;gap:12px}
-.metric{background:rgba(255,255,255,.15);padding:15px;border-radius:14px;text-align:center}
-h1{font-size:3rem}
-.subtitle{margin:10px 0 20px;font-weight:600}
-.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;background:#fff;color:#4338ca;margin:5px;font-weight:600}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:30px}.metrics{display:grid;gap:12px}
+.metric{background:rgba(255,255,255,.15);padding:15px;border-radius:12px;text-align:center}
+.btn{display:inline-block;padding:12px 18px;background:#fff;color:#4f46e5;text-decoration:none;border-radius:10px;margin:5px;font-weight:700}
 .btn-llm{background:#f97316;color:#fff}
-section{padding:60px 0}
-.about{display:grid;grid-template-columns:2fr 1fr;gap:25px}
-.box{background:#fff;padding:24px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
-.section-title{text-align:center;color:#4f46e5;margin-bottom:30px}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08)}
-.project-image{width:100%;height:220px;object-fit:cover;cursor:pointer;transition:.3s}
-.project-image:hover{transform:scale(1.02)}
-.card-content{padding:20px}
-.tags span{display:inline-block;background:#eef2ff;color:#4f46e5;padding:5px 10px;border-radius:999px;font-size:12px;margin:3px}
-details{margin-top:10px}
-summary{cursor:pointer;color:#f97316;font-weight:700}
+section{padding:60px 0}.box,.card{background:#fff;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:25px}.box{padding:25px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:25px}
+.card img{width:100%;height:220px;object-fit:cover;cursor:pointer}
+.content{padding:20px}.tags span{display:inline-block;background:#eef2ff;color:#4f46e5;padding:6px 10px;border-radius:20px;margin:3px;font-size:12px}
+summary{cursor:pointer;color:#f97316;font-weight:700;margin-top:10px}
+.modal{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.92);z-index:9999}
+.modal img{max-width:92%;max-height:92%;display:block;margin:20px auto}
+.close{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;cursor:pointer}
 footer{text-align:center;padding:40px;background:#fff}
-.modal{display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.9)}
-.modal-content{display:block;margin:auto;max-width:92%;max-height:92%;margin-top:20px}
-.close{position:absolute;top:20px;right:35px;color:white;font-size:45px;cursor:pointer}
-@media(max-width:768px){.about{grid-template-columns:1fr}h1{font-size:2rem}}
+@media(max-width:768px){.hero,.about{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <header>
 <div class="container hero">
-<div class="hero-left">
+<div>
 <h1>Umer K. Khan</h1>
-<div class="subtitle">Data Analytics • Business Intelligence • AI Solutions</div>
-<p>Business Intelligence and Analytics professional building enterprise reporting solutions, marketing intelligence platforms, and AI-powered analytics products.</p>
-<br>
+<h3>Data Analytics • Business Intelligence • AI Solutions</h3><br>
+<p>Business Intelligence and Analytics professional specializing in enterprise reporting, marketing intelligence, Snowflake, Tableau, Power BI, Python and end-to-end AI solutions.</p><br>
 <a class="btn" href="https://umer960.github.io/Umer_K.Khan_Resume.pdf">Resume</a>
 <a class="btn" href="https://www.linkedin.com/in/umer-k-khan-aa403a143/">LinkedIn</a>
 <a class="btn" href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated">Kaggle Projects</a>
 <a class="btn btn-llm">LLM Models</a>
 </div>
-<div class="hero-right">
-<div class="metric"><h3>500+</h3><p>Dashboards Built</p></div>
-<div class="metric"><h3>4+</h3><p>Years Experience</p></div>
-<div class="metric"><h3>100+</h3><p>Reports Automated</p></div>
-<div class="metric"><h3>Top 500</h3><p>Kaggle Contributor</p></div>
+<div class="metrics">
+<div class="metric"><h2>500+</h2>Dashboards Built</div>
+<div class="metric"><h2>4+</h2>Years Experience</div>
+<div class="metric"><h2>100+</h2>Reports Automated</div>
+<div class="metric"><h2>Top 500</h2>Kaggle Contributor</div>
 </div>
 </div>
 </header>
@@ -63,80 +50,87 @@ footer{text-align:center;padding:40px;background:#fff}
 <section>
 <div class="container about">
 <div class="box">
-<h2>About Me</h2>
-<p>Business Intelligence and Analytics professional with 4+ years of experience designing enterprise reporting solutions, analytics platforms, and AI-powered data products.</p><br>
-<p>Focused on end-to-end LLM solutions using Snowflake, Anthropic Claude, SQL, and Tableau to transform unstructured customer communications into actionable business intelligence.</p>
+<h2>About Me</h2><br>
+<p>Business Intelligence and Analytics professional with 4+ years of experience delivering enterprise reporting solutions, executive dashboards, data automation, and AI-powered analytics products.</p><br>
+<p>Designed and implemented end-to-end LLM solutions leveraging Python, Snowflake, Anthropic Claude, SQL, and Tableau. Passionate about combining data engineering, analytics, and generative AI to transform unstructured data into actionable business intelligence.</p>
 </div>
 <div class="box">
-<h3>Core Skills</h3>
-<ul>
-<li>Tableau</li><li>Power BI</li><li>Snowflake</li><li>SQL</li><li>Python</li><li>Claude AI</li><li>Generative AI</li>
-</ul>
+<h3>Core Skills</h3><br>
+<p>Tableau • Power BI • Snowflake • SQL • Python • Claude AI • Generative AI • Marketing Analytics • Data Engineering</p>
 </div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<h2 class="section-title">Featured Projects</h2>
+<h2>Featured Projects</h2><br>
 <div class="projects">
 
-<div class="card">
-<img src="LLM Redact.png" class="project-image" onclick="openModal(this.src)">
-<div class="card-content">
+<div class="card"><img src="LLM Redact.png" onclick="openModal(this.src)"><div class="content">
 <h3>Enterprise LLM-Powered Customer Intelligence Platform</h3>
-<div class="tags"><span>Snowflake</span><span>Claude</span><span>LLM</span><span>Tableau</span></div>
-<p>End-to-end AI pipeline integrating Snowflake and Anthropic Claude.</p>
-<details><summary>See More</summary><p>Inbound SMS stored in Snowflake, sent to Claude via API, classifications returned to Snowflake, and visualized in Tableau for sentiment, intent, escalation risk and customer intelligence reporting.</p></details>
-</div>
-</div>
+<div class="tags"><span>Snowflake</span><span>Python</span><span>Claude AI</span><span>Tableau</span><span>LLM</span></div>
+<p>Production-grade end-to-end LLM implementation in the financial industry.</p>
+<details><summary>See More</summary><p>Built a fully automated workflow where customer SMS communications are processed through a Python API integration that sends messages to Anthropic Claude. Claude returns sentiment, intent, escalation risk, and communication outcomes. Results are written back to Snowflake and surfaced through Tableau dashboards. Reduced manual review effort and established a scalable AI framework for customer intelligence reporting.</p></details>
+</div></div>
 
-<div class="card">
-<img src="Full Funnel Redacted.png" class="project-image" onclick="openModal(this.src)">
-<div class="card-content">
+<div class="card"><img src="Full Funnel Redacted.png" onclick="openModal(this.src)"><div class="content">
 <h3>Marketing Full Funnel Performance Platform</h3>
-<p>Executive reporting platform tracking the entire customer acquisition funnel.</p>
-<details><summary>See More</summary><p>Unified reporting for leads, submissions, approvals, funding and conversion metrics.</p></details>
-</div>
-</div>
+<div class="tags"><span>Tableau</span><span>Snowflake</span><span>Marketing Analytics</span></div>
+<p>Executive Tableau dashboard for the financial industry.</p>
+<details><summary>See More</summary><p>Tracks Leads, Applications, Submissions, Approvals, and Funding through the complete customer acquisition lifecycle. Includes executive KPI scorecards, sparkline trends, conversion metrics, source performance analysis, and leadership reporting.</p></details>
+</div></div>
 
-<div class="card">
-<img src="SMS Redact.png" class="project-image" onclick="openModal(this.src)">
-<div class="card-content">
+<div class="card"><img src="SMS Redact.png" onclick="openModal(this.src)"><div class="content">
 <h3>SMS Marketing Intelligence Platform</h3>
-<p>Comprehensive SMS engagement and campaign analytics solution.</p>
-<details><summary>See More</summary><p>Tracks delivery, engagement, responses, opt-outs and campaign effectiveness.</p></details>
-</div>
-</div>
+<div class="tags"><span>Tableau</span><span>Customer Engagement</span><span>Analytics</span></div>
+<p>Enterprise SMS reporting and engagement analytics platform.</p>
+<details><summary>See More</summary><p>Provides visibility into delivery rates, engagement, responses, opt-outs, campaign performance, and communication effectiveness across multiple customer programs.</p></details>
+</div></div>
+
+<div class="card"><div class="content">
+<h3>Regional Sales Performance Dashboard</h3>
+<div class="tags"><span>Tableau</span><span>Sales Analytics</span></div>
+<p>Executive sales dashboard.</p>
+<details><summary>See More</summary><p>Analyzes regional revenue trends, product performance, profitability, and growth opportunities to support executive decision-making.</p></details>
+</div></div>
+
+<div class="card"><div class="content">
+<h3>E-Commerce Sales Analytics Dashboard</h3>
+<div class="tags"><span>Tableau</span><span>Customer Analytics</span></div>
+<p>Comprehensive e-commerce analytics solution.</p>
+<details><summary>See More</summary><p>Evaluates product performance, purchasing behavior, regional sales trends, forecasting opportunities, and category profitability.</p></details>
+</div></div>
+
+<div class="card"><img src="Power BI Project.jpeg" onclick="openModal(this.src)"><div class="content">
+<h3>Trending Content Analysis (USA vs UK)</h3>
+<div class="tags"><span>Power BI</span><span>Consumer Analytics</span></div>
+<p>Comparative content consumption analytics dashboard.</p>
+<details><summary>See More</summary><p>Analyzes trending YouTube content between the United States and United Kingdom, highlighting engagement trends, viewing behavior, genre performance, and audience preferences.</p></details>
+</div></div>
+
+<div class="card"><img src="Power BI Project 2.jpeg" onclick="openModal(this.src)"><div class="content">
+<h3>Immigration Insights – IRCC Data</h3>
+<div class="tags"><span>Power BI</span><span>Data Integration</span></div>
+<p>Canadian immigration analytics dashboard.</p>
+<details><summary>See More</summary><p>Interactive reporting solution tracking invitation rounds, CRS score trends, and invitation volumes using IRCC data with automated refreshes and historical trend analysis.</p></details>
+</div></div>
 
 </div>
 </div>
 </section>
 
-<div id="imageModal" class="modal">
-<span class="close" onclick="closeModal()">&times;</span>
-<img class="modal-content" id="expandedImage">
-</div>
+<div id="modal" class="modal"><span class="close" onclick="closeModal()">&times;</span><img id="modalImg"></div>
 
 <footer>
 <h3>Let's Connect</h3>
 <p>khanum@rider.edu</p>
-<p><a href="https://www.linkedin.com/in/umer-k-khan-aa403a143/">LinkedIn</a></p>
+<p>LinkedIn: linkedin.com/in/umer-k-khan-aa403a143</p>
 </footer>
 
 <script>
-function openModal(src){
- document.getElementById('imageModal').style.display='block';
- document.getElementById('expandedImage').src=src;
-}
-function closeModal(){
- document.getElementById('imageModal').style.display='none';
-}
-window.onclick=function(e){
- let modal=document.getElementById('imageModal');
- if(e.target==modal){modal.style.display='none';}
-}
+function openModal(src){document.getElementById('modal').style.display='block';document.getElementById('modalImg').src=src;}
+function closeModal(){document.getElementById('modal').style.display='none';}
+window.onclick=function(e){if(e.target==document.getElementById('modal')) closeModal();}
 </script>
-
 </body>
 </html>
