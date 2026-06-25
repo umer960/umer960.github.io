@@ -1,219 +1,542 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Umer K Khan - Data Portfolio</title>
-  <!-- Google Font: Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-      color: #333;
-      margin: 0;
-      padding: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umer K. Khan | Business Intelligence Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:white;
+    padding:90px 0;
+    text-align:center;
+    border-bottom:1px solid #e2e8f0;
+}
+
+header h1{
+    font-size:3.5rem;
+    font-weight:800;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+header .title{
+    font-size:1.2rem;
+    color:#2563eb;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:750px;
+    margin:auto;
+    color:#64748b;
+    font-size:1.1rem;
+}
+
+.btn-group{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin:8px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-secondary{
+    border:1px solid #cbd5e1;
+    color:#334155;
+    background:white;
+}
+
+.btn-secondary:hover{
+    background:#f1f5f9;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    font-size:2rem;
+    margin-bottom:40px;
+    text-align:center;
+    color:#0f172a;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.stat-number{
+    font-size:2.5rem;
+    font-weight:800;
+    color:#2563eb;
+}
+
+.stat-label{
+    color:#64748b;
+    margin-top:8px;
+}
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+    color:#475569;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-title{
+    font-size:1.3rem;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.project-tools{
+    color:#2563eb;
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.project-card ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.project-card li{
+    margin-bottom:8px;
+}
+
+.powerbi{
+    background:white;
+}
+
+.dashboard{
+    width:100%;
+    border-radius:18px;
+    margin-top:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:24px;
+}
+
+.skill-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.skill-card h3{
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+.skill-card ul{
+    list-style:none;
+}
+
+.skill-card li{
+    margin-bottom:10px;
+    color:#475569;
+}
+
+.impact{
+    background:white;
+}
+
+.impact ul{
+    max-width:800px;
+    margin:auto;
+}
+
+.impact li{
+    margin-bottom:16px;
+    color:#475569;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    max-width:700px;
+    margin:auto;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#64748b;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.3rem;
     }
 
-    header {
-      background-color: white;
-      color: #4C837A;
-      padding: 40px 20px;
-      text-align: center;
+    .projects-grid{
+        grid-template-columns:1fr;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #4C837A;
-    }
-
-    header p {
-      color: #4C837A;
-      font-weight: 500;
-    }
-
-    .links {
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .links a {
-      color: #4C837A;
-      font-weight: 500;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #4C837A;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
-
-    iframe {
-      border: 1px solid #ccc;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin: 20px 0;
-      width: 100%;
-      max-width: 100%;
-      height: 600px;
-    }
-
-    img.dashboard {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background-color: #f1f1f1;
-      color: #555;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    .intro {
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      color: #333;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Umer K. Khan</h1>
-    <p>Business Intelligence & Analytics Professional | 500+ Dashboards Built | Top 500 Kaggle Contributor</p>
-    <div class="links">
-      <a href="https://umer960.github.io/Umer_K.Khan_Resume.pdf" target="_blank">Resume</a>
-      <a href="https://www.linkedin.com/in/umer-k-khan-aa403a143/" target="_blank">LinkedIn</a>
-      <a href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated" target="_blank">Python & Machine Learning Projects</a>
+<header>
+    <div class="container">
+
+        <h1>Umer K. Khan</h1>
+
+        <div class="title">
+            Business Intelligence & Analytics Professional
+        </div>
+
+        <p>
+            Transforming complex data into actionable business insights through
+            Tableau, Power BI, SQL, Python, Snowflake, and AI-driven analytics.
+            Experienced in building scalable reporting solutions, executive
+            dashboards, and automated intelligence platforms.
+        </p>
+
+        <div class="btn-group">
+            <a class="btn btn-primary" href="https://umer960.github.io/Umer_K.Khan_Resume.pdf" target="_blank">Resume</a>
+
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/umer-k-khan-aa403a143/" target="_blank">LinkedIn</a>
+
+            <a class="btn btn-secondary" href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated" target="_blank">Kaggle Projects</a>
+        </div>
+
     </div>
-  </header>
+</header>
 
-  <main>
-    <section class="intro">
-      <p>
-        I'm a Business Intelligence Analyst with 4+ years of experience delivering data-driven insights, building 500+ dashboards, and automating reporting for scalable business decisions.
-      </p>
-    </section>
+<section>
+    <div class="container">
 
-    <h2>📊 Tableau Project – Regional Sales Performance</h2>
-    <p>This interactive dashboard showcases regional sales metrics, trends, and key product segments. Designed for executive decision-making, it highlights growth opportunities and underperforming areas across categories.</p>
-    <div class='tableauPlaceholder' id='viz1746374553940' style='position: relative'>
-      <noscript>
-        <a href='#'><img alt='Dashboard 2 ' src='https://public.tableau.com/static/images/Bo/Book1_17451317524040/Dashboard2/1_rss.png' style='border: none' /></a>
-      </noscript>
-      <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='Book1_17451317524040&#47;Dashboard2' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/Bo/Book1_17451317524040/Dashboard2/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object>
+        <h2 class="section-title">Professional Highlights</h2>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Dashboards Built</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Reports Automated</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">Top 500</div>
+                <div class="stat-label">Kaggle Contributor</div>
+            </div>
+
+        </div>
+
     </div>
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1746374553940');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = '115%';
-        vizElement.style.height = '900px';
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = '115%';
-        vizElement.style.height = '900px';
-      } else {
-        vizElement.style.width = '115%';
-        vizElement.style.height = '900px';
-      }
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+</section>
 
-    <h2>📈 Tableau Project – E-Commerce Sales Dashboard</h2>
-    <p>This dashboard provides deep insights into e-commerce sales performance across products, regions, and time. It enables data-driven marketing, forecasting, and category performance analysis.</p>
-    <div class='tableauPlaceholder' id='viz1746374094662' style='position: relative'>
-      <noscript>
-        <a href='#'><img alt='Sales Dashboard ' src='https://public.tableau.com/static/images/Sa/SalesDashboard_17458550176770/Dashboard1/1_rss.png' style='border: none' /></a>
-      </noscript>
-      <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='SalesDashboard_17458550176770&#47;Dashboard1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/Sa/SalesDashboard_17458550176770/Dashboard1/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object>
+<section class="about">
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            Business Intelligence Analyst with experience delivering data-driven
+            solutions across marketing, operations, and executive leadership.
+            Skilled in building scalable reporting systems, designing KPI
+            frameworks, and automating analytics workflows that improve business
+            decision-making. Passionate about turning raw data into strategic
+            insights through visualization, automation, and AI.
+        </div>
+
     </div>
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1746374094662');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.width = '1200px';
-        vizElement.style.height = '827px';
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = '1200px';
-        vizElement.style.height = '827px';
-      } else {
-        vizElement.style.width = '100%';
-        vizElement.style.height = '1777px';
-      }
-      var scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
+</section>
 
-    <h2>📉 Power BI Projects</h2>
+<section>
+    <div class="container">
 
-    <p><strong>Trending Content Analysis (USA vs UK)</strong></p>
-    <p>The analysis shows the different trends and types of content that are widely viewed by audiences in the USA and UK. It provides a side-by-side comparison of trending videos. The center graphs highlight which genres are most viewed.</p>
-    <p>The scorecards at the top show the total views for each country: 173M in the UK versus 143M in the USA. The top video in the UK exceeds 300M views, while the top video in the USA has over 200M views.</p>
-    <img src="Power BI Project.jpeg" alt="Power BI Project 1" class="dashboard">
+        <h2 class="section-title">Featured Tableau Projects</h2>
 
-    <p><strong>Immigration Insights – IRCC Data</strong></p>
-    <p>This dashboard connects with the IRCC website and visualizes draws for immigration, including the number of invitations and minimum CRS scores. Lower scores are preferable as they allow more people to qualify.</p>
-    <p>Color formatting is based on a 470 CRS score threshold—scores above 470 turn red, while those below appear green, visually indicating favorable draw scores.</p>
-    <img src="Power BI Project 2.jpeg" alt="Power BI Project 2" class="dashboard">
+        <div class="projects-grid">
 
-  </main>
+            <div class="project-card">
 
-  <footer>
-    &copy; 2025 Umer K Khan | Built with ❤️ and GitHub Pages
-  </footer>
+                <div class="project-title">
+                    Regional Sales Performance Dashboard
+                </div>
+
+                <div class="project-tools">
+                    Tableau • SQL • Business Analytics
+                </div>
+
+                <p>
+                    Executive-level sales performance dashboard designed to
+                    analyze regional revenue trends, category performance,
+                    profitability, and growth opportunities.
+                </p>
+
+                <ul>
+                    <li>Regional performance monitoring</li>
+                    <li>Product category analysis</li>
+                    <li>Executive KPI tracking</li>
+                    <li>Revenue growth identification</li>
+                </ul>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-title">
+                    E-Commerce Sales Analytics Dashboard
+                </div>
+
+                <div class="project-tools">
+                    Tableau • SQL • Forecasting
+                </div>
+
+                <p>
+                    Comprehensive analytics solution for evaluating sales
+                    performance, customer purchasing behavior, and revenue
+                    trends across products and regions.
+                </p>
+
+                <ul>
+                    <li>Customer trend analysis</li>
+                    <li>Revenue forecasting support</li>
+                    <li>Product profitability tracking</li>
+                    <li>Marketing performance insights</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="powerbi">
+    <div class="container">
+
+        <h2 class="section-title">Power BI Projects</h2>
+
+        <div class="project-card">
+
+            <div class="project-title">
+                Trending Content Analysis (USA vs UK)
+            </div>
+
+            <p>
+                Comparative analysis of trending content consumption patterns
+                between audiences in the United States and the United Kingdom.
+                The dashboard highlights genre preferences, total views,
+                engagement trends, and top-performing content.
+            </p>
+
+            <img src="Power BI Project.jpeg"
+                 class="dashboard"
+                 alt="Trending Content Analysis">
+
+        </div>
+
+        <br><br>
+
+        <div class="project-card">
+
+            <div class="project-title">
+                Immigration Insights – IRCC Data
+            </div>
+
+            <p>
+                Interactive dashboard analyzing Canadian immigration draw
+                results, invitation counts, and CRS score trends. Automated
+                data collection and visualization provide easy access to
+                immigration insights and historical draw performance.
+            </p>
+
+            <img src="Power BI Project 2.jpeg"
+                 class="dashboard"
+                 alt="IRCC Dashboard">
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill-card">
+                <h3>Business Intelligence</h3>
+                <ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Dashboard Design</li>
+                    <li>KPI Frameworks</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data & Engineering</h3>
+                <ul>
+                    <li>SQL</li>
+                    <li>Snowflake</li>
+                    <li>Data Modeling</li>
+                    <li>ETL Development</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Analytics & AI</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Machine Learning</li>
+                    <li>Reporting Automation</li>
+                    <li>Generative AI</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="impact">
+    <div class="container">
+
+        <h2 class="section-title">Business Impact</h2>
+
+        <ul>
+            <li>Built and delivered 500+ dashboards across multiple business functions.</li>
+            <li>Automated recurring reporting processes to reduce manual effort.</li>
+            <li>Designed executive reporting solutions supporting strategic decisions.</li>
+            <li>Developed AI-assisted reporting workflows for faster analysis.</li>
+            <li>Created scalable KPI frameworks and standardized reporting metrics.</li>
+        </ul>
+
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="contact-card">
+
+            <p>
+                Interested in business intelligence, analytics, automation,
+                or data strategy opportunities?
+            </p>
+
+            <br>
+
+            <a class="btn btn-primary"
+               href="https://www.linkedin.com/in/umer-k-khan-aa403a143/"
+               target="_blank">
+               Connect on LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Umer K. Khan | Business Intelligence Portfolio
+</footer>
 
 </body>
 </html>
-
-
+```
