@@ -3,53 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umer K. Khan | Data Analytics • Business Intelligence • AI Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Umer K. Khan Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:#f4f7fe;color:#1e293b}
 .container{max-width:1200px;margin:auto;padding:0 24px}
-header{padding:80px 0;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
-.hero{display:flex;justify-content:space-between;gap:40px;align-items:center;flex-wrap:wrap}
-.hero-text{flex:2}
-.hero-stats{flex:1;display:grid;gap:12px}
-.metric{background:rgba(255,255,255,.15);padding:16px;border-radius:14px;text-align:center}
+header{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:80px 0}
+.hero{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.hero-left{flex:2}
+.hero-right{flex:1;display:grid;gap:12px}
+.metric{background:rgba(255,255,255,.15);padding:15px;border-radius:14px;text-align:center}
 h1{font-size:3rem}
 .subtitle{margin:10px 0 20px;font-weight:600}
-.btns a{display:inline-block;margin:6px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
-.btn{background:#fff;color:#4338ca}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;background:#fff;color:#4338ca;margin:5px;font-weight:600}
 .btn-llm{background:#f97316;color:#fff}
 section{padding:60px 0}
-.section-title{text-align:center;margin-bottom:30px;color:#4338ca}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:25px}
+.box{background:#fff;padding:24px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.section-title{text-align:center;color:#4f46e5;margin-bottom:30px}
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
 .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.08)}
-.card img{width:100%;height:220px;object-fit:cover}
+.project-image{width:100%;height:220px;object-fit:cover;cursor:pointer;transition:.3s}
+.project-image:hover{transform:scale(1.02)}
 .card-content{padding:20px}
-.tags span{display:inline-block;background:#eef2ff;color:#4f46e5;padding:5px 10px;border-radius:999px;margin:3px;font-size:12px}
+.tags span{display:inline-block;background:#eef2ff;color:#4f46e5;padding:5px 10px;border-radius:999px;font-size:12px;margin:3px}
 details{margin-top:10px}
 summary{cursor:pointer;color:#f97316;font-weight:700}
-.about{display:grid;grid-template-columns:2fr 1fr;gap:30px}
-.aboutbox,.statsbox{background:#fff;padding:24px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
 footer{text-align:center;padding:40px;background:#fff}
-@media(max-width:768px){.about{grid-template-columns:1fr} h1{font-size:2rem}}
+.modal{display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.9)}
+.modal-content{display:block;margin:auto;max-width:92%;max-height:92%;margin-top:20px}
+.close{position:absolute;top:20px;right:35px;color:white;font-size:45px;cursor:pointer}
+@media(max-width:768px){.about{grid-template-columns:1fr}h1{font-size:2rem}}
 </style>
 </head>
 <body>
 
 <header>
 <div class="container hero">
-<div class="hero-text">
+<div class="hero-left">
 <h1>Umer K. Khan</h1>
 <div class="subtitle">Data Analytics • Business Intelligence • AI Solutions</div>
-<p>Business Intelligence and Analytics professional building enterprise reporting platforms, marketing intelligence solutions, and AI-powered analytics products.</p>
-<div class="btns">
-<a class="btn" href="https://umer960.github.io/Umer_K.Khan_Resume.pdf" target="_blank">Resume</a>
-<a class="btn" href="https://www.linkedin.com/in/umer-k-khan-aa403a143/" target="_blank">LinkedIn</a>
-<a class="btn" href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated" target="_blank">Kaggle Projects</a>
+<p>Business Intelligence and Analytics professional building enterprise reporting solutions, marketing intelligence platforms, and AI-powered analytics products.</p>
+<br>
+<a class="btn" href="https://umer960.github.io/Umer_K.Khan_Resume.pdf">Resume</a>
+<a class="btn" href="https://www.linkedin.com/in/umer-k-khan-aa403a143/">LinkedIn</a>
+<a class="btn" href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated">Kaggle Projects</a>
 <a class="btn btn-llm">LLM Models</a>
 </div>
-</div>
-<div class="hero-stats">
+<div class="hero-right">
 <div class="metric"><h3>500+</h3><p>Dashboards Built</p></div>
 <div class="metric"><h3>4+</h3><p>Years Experience</p></div>
 <div class="metric"><h3>100+</h3><p>Reports Automated</p></div>
@@ -60,22 +62,15 @@ footer{text-align:center;padding:40px;background:#fff}
 
 <section>
 <div class="container about">
-<div class="aboutbox">
+<div class="box">
 <h2>About Me</h2>
-<p>Business Intelligence and Analytics professional with 4+ years of experience designing enterprise reporting solutions, analytics platforms, and AI-powered data products. Experienced in Tableau, Power BI, SQL, Snowflake, Python, reporting automation, and executive dashboards.</p>
-<br>
-<p>Recently focused on integrating Large Language Models (LLMs) into business processes, including designing end-to-end AI pipelines leveraging Snowflake, Anthropic Claude, and Tableau to transform unstructured customer communications into actionable business intelligence.</p>
+<p>Business Intelligence and Analytics professional with 4+ years of experience designing enterprise reporting solutions, analytics platforms, and AI-powered data products.</p><br>
+<p>Focused on end-to-end LLM solutions using Snowflake, Anthropic Claude, SQL, and Tableau to transform unstructured customer communications into actionable business intelligence.</p>
 </div>
-<div class="statsbox">
-<h3>Core Expertise</h3>
+<div class="box">
+<h3>Core Skills</h3>
 <ul>
-<li>Tableau</li>
-<li>Power BI</li>
-<li>Snowflake</li>
-<li>SQL</li>
-<li>Python</li>
-<li>Generative AI</li>
-<li>Marketing Analytics</li>
+<li>Tableau</li><li>Power BI</li><li>Snowflake</li><li>SQL</li><li>Python</li><li>Claude AI</li><li>Generative AI</li>
 </ul>
 </div>
 </div>
@@ -87,50 +82,61 @@ footer{text-align:center;padding:40px;background:#fff}
 <div class="projects">
 
 <div class="card">
-<img src="LLM Redact.png" alt="LLM Project">
+<img src="LLM Redact.png" class="project-image" onclick="openModal(this.src)">
 <div class="card-content">
 <h3>Enterprise LLM-Powered Customer Intelligence Platform</h3>
 <div class="tags"><span>Snowflake</span><span>Claude</span><span>LLM</span><span>Tableau</span></div>
-<p>End-to-end AI solution analyzing inbound SMS communications using Anthropic Claude integrated with Snowflake.</p>
-<details><summary>See More</summary>
-<p>Built a Snowflake-to-Claude pipeline using API integration. SMS data was processed by Claude, classifications returned to Snowflake, and Tableau dashboards consumed enriched outputs for sentiment, intent, escalation risk, and customer intelligence reporting.</p>
-</details>
+<p>End-to-end AI pipeline integrating Snowflake and Anthropic Claude.</p>
+<details><summary>See More</summary><p>Inbound SMS stored in Snowflake, sent to Claude via API, classifications returned to Snowflake, and visualized in Tableau for sentiment, intent, escalation risk and customer intelligence reporting.</p></details>
 </div>
 </div>
 
 <div class="card">
-<img src="Full Funnel Redacted.png" alt="Funnel">
+<img src="Full Funnel Redacted.png" class="project-image" onclick="openModal(this.src)">
 <div class="card-content">
 <h3>Marketing Full Funnel Performance Platform</h3>
-<p>Executive reporting platform tracking the customer journey from lead to funding.</p>
-<details><summary>See More</summary><p>Unified marketing performance, conversion metrics, and source effectiveness into executive-level reporting.</p></details>
+<p>Executive reporting platform tracking the entire customer acquisition funnel.</p>
+<details><summary>See More</summary><p>Unified reporting for leads, submissions, approvals, funding and conversion metrics.</p></details>
 </div>
 </div>
 
 <div class="card">
-<img src="SMS Redact.png" alt="SMS">
+<img src="SMS Redact.png" class="project-image" onclick="openModal(this.src)">
 <div class="card-content">
 <h3>SMS Marketing Intelligence Platform</h3>
-<p>Comprehensive SMS engagement and campaign reporting solution.</p>
-<details><summary>See More</summary><p>Tracks delivery, engagement, opt-outs, response behavior, and communication effectiveness.</p></details>
+<p>Comprehensive SMS engagement and campaign analytics solution.</p>
+<details><summary>See More</summary><p>Tracks delivery, engagement, responses, opt-outs and campaign effectiveness.</p></details>
 </div>
 </div>
-
-<div class="card"><div class="card-content"><h3>Regional Sales Performance Dashboard</h3><p>Tableau executive sales dashboard.</p></div></div>
-<div class="card"><div class="card-content"><h3>E-Commerce Sales Analytics Dashboard</h3><p>Tableau analytics solution for revenue and product performance.</p></div></div>
-<div class="card"><div class="card-content"><h3>Trending Content Analysis (USA vs UK)</h3><p>Power BI comparative content analytics dashboard.</p></div></div>
-<div class="card"><div class="card-content"><h3>Immigration Insights – IRCC Data</h3><p>Power BI dashboard analyzing invitation and CRS trends.</p></div></div>
 
 </div>
 </div>
 </section>
 
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="expandedImage">
+</div>
+
 <footer>
 <h3>Let's Connect</h3>
-<p>Email: khanum@rider.edu</p>
+<p>khanum@rider.edu</p>
 <p><a href="https://www.linkedin.com/in/umer-k-khan-aa403a143/">LinkedIn</a></p>
-<p>© 2026 Umer K. Khan</p>
 </footer>
+
+<script>
+function openModal(src){
+ document.getElementById('imageModal').style.display='block';
+ document.getElementById('expandedImage').src=src;
+}
+function closeModal(){
+ document.getElementById('imageModal').style.display='none';
+}
+window.onclick=function(e){
+ let modal=document.getElementById('imageModal');
+ if(e.target==modal){modal.style.display='none';}
+}
+</script>
 
 </body>
 </html>
