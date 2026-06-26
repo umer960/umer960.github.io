@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +10,24 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:#f4f7fe;color:#1e293b}
 .container{max-width:1300px;margin:auto;padding:0 20px}
-header{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:35px 0}
-.hero{display:grid;grid-template-columns:2fr 1fr;gap:30px}
-.metrics{display:grid;gap:12px}
-.metric{background:rgba(255,255,255,.15);padding:15px;border-radius:12px;text-align:center}
+header{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:35px 0 40px}
+.hero{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.75fr);gap:18px;align-items:start}
+.hero-details{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.95fr);gap:16px;align-items:stretch;margin-top:18px}
+.hero-box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;box-shadow:0 10px 25px rgba(0,0,0,.08)}
+.hero-box br{display:none}
+.hero-box h2{font-size:22px;line-height:1.15;margin-bottom:8px}
+.hero-box h3{font-size:19px;line-height:1.15;margin-bottom:10px}
+.hero-box p{font-size:12px;line-height:1.28}
+.hero-box p:not(:last-child){margin-bottom:8px}
+.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}
+.skills-grid ul{margin:0;padding-left:16px}
+.skills-grid li{font-size:12px;line-height:1.35;margin-bottom:4px}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%;max-width:330px;justify-self:end}
+.metric{background:rgba(255,255,255,.15);aspect-ratio:1/1;padding:12px;border-radius:12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:120px;position:relative;overflow:hidden}
+.metric h2{font-size:26px;line-height:1.1;margin-bottom:6px}
+.sparkline{width:82%;height:28px;margin-top:8px;opacity:.9}
+.sparkline polyline{fill:none;stroke:#86efac;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.sparkline path{fill:rgba(134,239,172,.18)}
 .btn{display:inline-block;padding:12px 18px;background:#fff;color:#4f46e5;text-decoration:none;border-radius:10px;margin:5px;font-weight:700}
 .btn-llm{background:#f97316;color:#fff}
 section{padding:30px 0}
@@ -29,7 +44,10 @@ summary{cursor:pointer;color:#f97316;font-weight:700;margin-top:10px}
 .close{position:absolute;top:20px;right:30px;color:#fff;font-size:40px;cursor:pointer}
 footer{text-align:center;padding:40px;background:#fff}
 @media(max-width:768px){
-.hero,.about{grid-template-columns:1fr}
+.hero,.hero-details,.about{grid-template-columns:1fr}
+.skills-grid{grid-template-columns:1fr}
+.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.metric{min-height:110px}
 }
 </style>
 </head>
@@ -47,31 +65,68 @@ footer{text-align:center;padding:40px;background:#fff}
 <a class="btn" href="https://www.linkedin.com/in/umer-k-khan-aa403a143/">LinkedIn</a>
 <a class="btn" href="https://www.kaggle.com/umerkk12/code?orderBy=dateUpdated">Kaggle Projects</a>
 <a class="btn btn-llm">LLM Models</a>
-</div>
 
-<div class="metrics">
-<div class="metric"><h2>500+</h2>Dashboards Built</div>
-<div class="metric"><h2>4+</h2>Years Experience</div>
-<div class="metric"><h2>100+</h2>Reports Automated</div>
-<div class="metric"><h2>Top 500</h2>Kaggle Contributor</div>
-</div>
-</div>
-</header>
-
-<section>
-<div class="container about">
-<div class="box">
+<div class="hero-details">
+<div class="hero-box">
 <h2>About Me</h2><br>
 <p>Business Intelligence and Analytics professional with 4+ years of experience delivering enterprise reporting solutions, executive dashboards, data automation, and AI-powered analytics products.</p><br>
 <p>Designed and implemented end-to-end LLM solutions leveraging Python, Snowflake, Anthropic Claude, SQL, and Tableau. Passionate about combining data engineering, analytics, and generative AI to transform unstructured data into actionable business intelligence.</p>
 </div>
 
-<div class="box">
+<div class="hero-box">
 <h3>Core Skills</h3><br>
-<p>Tableau • Power BI • Snowflake • SQL • Python • Claude AI • Generative AI • Marketing Analytics • Data Engineering</p>
+<div class="skills-grid">
+<ul>
+<li>Tableau</li>
+<li>Power BI</li>
+<li>Snowflake</li>
+<li>SQL</li>
+<li>Python</li>
+<li>Claude AI</li>
+<li>Generative AI</li>
+</ul>
+<ul>
+<li>Marketing Analytics</li>
+<li>Data Engineering</li>
+<li>Google Analytics</li>
+<li>Looker Studio</li>
+<li>AI/ML</li>
+<li>Advanced Excel</li>
+<li>KPI Reporting</li>
+</ul>
 </div>
 </div>
-</section>
+</div>
+</div>
+
+<div class="metrics">
+<div class="metric"><h2>500+</h2>Dashboards Built
+<svg class="sparkline" viewBox="0 0 120 34" aria-hidden="true">
+<path d="M4 30 L4 24 L24 21 L44 23 L64 15 L84 17 L104 8 L116 11 L116 34 L4 34 Z"></path>
+<polyline points="4,24 24,21 44,23 64,15 84,17 104,8 116,11"></polyline>
+</svg>
+</div>
+<div class="metric"><h2>4+</h2>Years Experience
+<svg class="sparkline" viewBox="0 0 120 34" aria-hidden="true">
+<path d="M4 28 L4 25 L24 24 L44 21 L64 20 L84 15 L104 13 L116 9 L116 34 L4 34 Z"></path>
+<polyline points="4,25 24,24 44,21 64,20 84,15 104,13 116,9"></polyline>
+</svg>
+</div>
+<div class="metric"><h2>100+</h2>Reports Automated
+<svg class="sparkline" viewBox="0 0 120 34" aria-hidden="true">
+<path d="M4 29 L4 26 L22 18 L40 20 L58 13 L76 16 L96 10 L116 6 L116 34 L4 34 Z"></path>
+<polyline points="4,26 22,18 40,20 58,13 76,16 96,10 116,6"></polyline>
+</svg>
+</div>
+<div class="metric"><h2>Top 500</h2>Kaggle Contributor
+<svg class="sparkline" viewBox="0 0 120 34" aria-hidden="true">
+<path d="M4 27 L4 22 L22 24 L42 18 L62 20 L82 14 L102 16 L116 10 L116 34 L4 34 Z"></path>
+<polyline points="4,22 22,24 42,18 62,20 82,14 102,16 116,10"></polyline>
+</svg>
+</div>
+</div>
+</div>
+</header>
 
 <section>
 <div class="container">
